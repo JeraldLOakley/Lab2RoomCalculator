@@ -14,7 +14,7 @@ namespace Lab2
 
 		static void Main(string[] args)
 		{
-			//tasks: calculate the perimeter and the area of the rooms
+
 			Console.WriteLine("Hello ,and welcome to \"The Room Calculator 3000 \"");
 			Console.WriteLine();
 
@@ -23,19 +23,26 @@ namespace Lab2
 
 
 			Start:
-			Console.WriteLine("Please enter a Length");
+			Console.Write("Please enter a Length in feet: ");
 			double Length = Double.Parse(Console.ReadLine());
 			Console.WriteLine();
-			Console.WriteLine("Please enter a Width");
+
+			Console.Write("Please enter a Width in feet: ");
 			double Width = Double.Parse(Console.ReadLine());
 			Console.WriteLine();
 
-			Double Area = (Length * Width);
-			Double Perimeter = ((Length + Length) + (Width + Width));
+			Console.Write("Please enter a Height in feet: ");
+			double Height = Double.Parse(Console.ReadLine());
+			Console.WriteLine();
 
-			Console.WriteLine("The area of the room is " + Perimeter + "ft");
+			double Area = (Length * Width);
+			double Perimeter = (Length * 2 + Width * 2);
+			double Volume = (Length * Width * Height);
 
-			Console.WriteLine("The area of the room is " + Area + "ft");
+			Console.WriteLine($"The area of the room is {Perimeter}ft");
+			Console.WriteLine($"The area of the room is {Area}sqft");
+			Console.WriteLine($"The volume of the room is {Volume}cbft");
+
 
 			Console.WriteLine("Would you like to measure another room? Y//N");
 			string Continue = Console.ReadLine();
@@ -52,9 +59,9 @@ namespace Lab2
 			{
 				Console.Read();
 			}
-			
-				
-			
+
+
+
 
 		}
 	}
